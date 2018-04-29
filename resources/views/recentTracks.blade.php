@@ -13,7 +13,7 @@
         <table class="table table-fixed">
           <thead>
             <tr>
-              <th class="col-xs-2">Preview</th><th class="col-xs-8">Track</th><th class="col-xs-2">Artist</th>
+              <th class="col-lg-2">Preview</th><th class="col-lg-8">Track</th><th class="col-lg-2">Artist</th>
             </tr>
           </thead>
           <tbody>
@@ -26,14 +26,14 @@
             foreach($it as $item)
              :?>
             <tr>
-              <td class="col-xs-3">
+              <td class="col-lg-3">
                 <audio controls="controls" autobuffer="autobuffer">
                 <source src="<?php echo $item[2]; ?>">
                 </audio>
                 <!-- {{$item[2]}} -->
               </td>
-              <td class="col-xs-7">{{$item[0]}}</td>
-              <td class="col-xs-4">{{$item[1]}}</td>
+              <td class="col-lg-7">{{$item[0]}}</td>
+              <td class="col-lg-4">{{$item[1]}}</td>
             </tr>
             <?php endforeach ?>
           </tbody>
