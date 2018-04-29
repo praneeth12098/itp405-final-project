@@ -31,17 +31,17 @@ class TextController extends Controller
     	if($validation->passes()) {
 
     		$phone = DB::table('phone')
-    					->where('spotify_token', '=', $user->spotify_token)
+    					->where('id', '=', $user->id)
     					->first();
 
     		if(!$phone) {
     			DB::table('phone')->insert([
 	    			'phone' => $request->input('phone'),
-	    			'spotify_token' =>$user->spotify_token
+	    			'id' =>$user->id
 	    		]);
     		} else if ($phone != $request->input('phone')) {
     			DB::table('phone')
-    				->where('spotify_token', '=', $user->spotify_token)
+    				->where('id', '=', $user->id)
     				->update([
     					'phone' => $request->input('phone'),
     				]);
@@ -111,7 +111,7 @@ class TextController extends Controller
     	// $api->setReturnType(SpotifyWebAPI\SpotifyWebAPI::RETURN_ASSOC);
 
     	$results = DB::table('favorites')
-    		->where('spotify_token', '=', $token)
+    		->where('id', '=', $user->id)
     		->where('artist_id', '=', $artistId)
     		->value('artist_id');
 
@@ -128,7 +128,7 @@ class TextController extends Controller
     	} else {
     		DB::table('favorites')
     			->insert([
-    				'spotify_token' => $token,
+    				'id' => $user->id,
     				'artist_id' => $artistId,
     			]);
 

@@ -60,6 +60,8 @@ class ProfileController extends Controller
     public function getTopTracks() {
         $user = Auth::user();
         $token = $user->spotify_token;
+        $id = $user->id;
+        $dd(id);
 
         $api = new SpotifyWebAPI\SpotifyWebAPI();
         $api->setAccessToken($token);
@@ -132,6 +134,8 @@ class ProfileController extends Controller
     public function getSubscriptions() {
         $user = Auth::user();
         $token = $user->spotify_token;
+        $id = $user->id;
+        // dd($id);
 
         $api = new SpotifyWebAPI\SpotifyWebAPI();
         $api->setAccessToken($token);
@@ -139,7 +143,7 @@ class ProfileController extends Controller
 
         // dd($token);
         $results = DB::table('favorites')
-            ->where('spotify_token', '=', $token)
+            ->where('id', '=', $id)
             ->get();
 
         // $results = $results['items'];
