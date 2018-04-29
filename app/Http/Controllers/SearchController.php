@@ -46,9 +46,13 @@ class SearchController extends Controller
     	$artistList = $artistArr['items'];
     	$artist = $artistList[0];
     	$artistId = $artist['id'];
-    	$imageArr = $artist['images'];
-    	$imageInfo = $imageArr[0];
-    	$image = $imageInfo['url'];
+    	// $imageArr = $artist['images'];
+    	// if($imageArr[0]) {
+    	// 	$imageInfo = $imageArr[0];
+    	// 	$image = $imageInfo['url'];
+    	// }
+    	// $imageInfo = $imageArr[0];
+    	// $image = $imageInfo['url'];
     	$artist = $artist['name'];
 
     	return redirect('/results/'.$artist);
