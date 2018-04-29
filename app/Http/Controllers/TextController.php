@@ -7,7 +7,7 @@ use Auth;
 use Validator;
 use SpotifyWebAPI;
 
-require 'vendor/autoload.php';
+// require 'vendor/autoload.php';
 
 class TextController extends Controller
 {
