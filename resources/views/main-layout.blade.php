@@ -37,9 +37,6 @@
 					<li class="nav-item">
 						<a href="/login" class="nav-link">Login</a>
 					</li>
-					<li class="nav-item">
-						<a href="/signup" class="nav-link">Sign Up</a>
-					</li>
 				@endif
 			</ul>
 			@yield('content')
