@@ -7,7 +7,7 @@ use Auth;
 use SpotifyWebAPI;
 // use App\Http\Controllers\SpotifyWebAPI\SpotifyWebAPI;
 
-require '/Users/Praneeth/Desktop/SpotifyDash/vendor/autoload.php';
+require 'vendor/autoload.php';
 
 class SearchController extends Controller
 {

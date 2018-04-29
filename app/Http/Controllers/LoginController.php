@@ -9,7 +9,7 @@ use App\User;
 use SpotifyWebAPI;
 // use Session;
 
-require '/Users/Praneeth/Desktop/SpotifyDash/vendor/autoload.php';
+require 'vendor/autoload.php';
 
 class LoginController extends Controller
 {
