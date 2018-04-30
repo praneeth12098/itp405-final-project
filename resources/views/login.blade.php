@@ -3,8 +3,7 @@
 @section('title', 'Login')
 
 @section('content')
-<h1 style="text-align: center">Login</h1>
-<p style="text-align: center">Don't have an account? Please <a href="/signup">Signup</a></p>
+<h1 style="text-align: center">Login with Spotify</h1>
 <!-- <form method="post">
     {{ csrf_field() }}
     <div class="form-group">
