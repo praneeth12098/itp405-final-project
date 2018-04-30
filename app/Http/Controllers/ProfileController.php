@@ -61,7 +61,7 @@ class ProfileController extends Controller
         $user = Auth::user();
         $token = $user->spotify_token;
         $id = $user->id;
-        $dd(id);
+        // $dd(id);
 
         $api = new SpotifyWebAPI\SpotifyWebAPI();
         $api->setAccessToken($token);
