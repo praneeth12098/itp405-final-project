@@ -22,8 +22,8 @@ Route::get('/logout', 'LoginController@logout');
 Route::get('/login/spotify', 'LoginController@redirectToSpotify');
 Route::get('/login/spotify/callback', 'LoginController@handleSpotifyCallback');
 
-Route::get('/signup', 'SignupController@index');
-Route::post('/signup', 'SignupController@signup');
+// Route::get('/signup', 'SignupController@index');
+// Route::post('/signup', 'SignupController@signup');
 
 Route::get('/profile', 'ProfileController@show');
 Route::get('/profile/recentTracks', 'ProfileController@getRecentlyPlayed');
